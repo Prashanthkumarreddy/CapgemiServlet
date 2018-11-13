@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Creating Fixed Header and Footer with CSS</title>
+<style type="text/css">
+/* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+.container {
+	width: 80%;
+	margin: 0 auto; /* Center the DIV horizontally */
+}
+
+.fixed-header, .fixed-footer {
+	width: 100%;
+	position: fixed;
+	background: #333;
+	padding: 10px 0;
+	color: #fff;
+}
+
+.fixed-header {
+	top: 0;
+}
+
+.fixed-footer {
+	bottom: 0;
+}
+/* Some more styles to beutify this example */
+nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 7px 25px;
+	display: inline-block;
+}
+
+.container p {
+	line-height: 200px; /* Create scrollbar to test positioning */
+}
+</style>
+</head>
+<body background="images/machupicchuperu.jpg">
+	<div class="fixed-header">
+		<div class="container">
+			<nav>
+				<a href="http://localhost:8008/CapgemiServlet/he.html">Home</a>
+				<a href="http://localhost:8008/CapgemiServlet/signup.html">SignUp</a>
+				<a href="http://localhost:8008/CapgemiServlet/search.html">Search</a>
+				<a href="http://localhost:8008/CapgemiServlet/delete.html">Delete</a>
+				<a href="http://localhost:8008/CapgemiServlet/contact.html">Contact
+					Us</a>
+			</nav>
+		</div>
+	</div>
+	<div class="container">
+		<p></p>
+		<p></p>
+	</div>
+
+
+	<h1>
+		<center>Employee Management System</center>
+	</h1>
+	<table border="10px" cellspacing="10px" align="center"
+		bgcolor="#ffffcc">
+		<form method="post"
+			action="http://localhost:8080/CapgemiServlet/register">
+			<tr>
+				<td>Employee id: <span style="color: red;">*
+						<td><input type="number" name="empid"
+							placeholder="Enter emp id" required /></td></td>
+			</tr>
+			<tr>
+				<td>Employee name:<span style="color: red;">*
+						<td><input type="text" name="name"
+							placeholder="Enter first name" required /></td></td>
+			</tr>
+
+			<tr>
+				<td>Designation:<span style="color: red;">*
+						<td><input type="text" name="desig" required /></td></td>
+			</tr>
+			<tr>
+				<td>Salary:<span style="color: red;">*
+						<td><input type="number" name="sal" required /></td></td>
+			</tr>
+			<tr>
+				<td>Manager ID:<span style="color: red;">*
+						<td><input type="number" name="mgr" required /></td></td>
+			</tr>
+
+			<tr>
+				<td>Paasword:<span style="color: red;">*
+						<td><input type="password" name="pwd" required /></td></td>
+			</tr>
+			<tr>
+				<td>City:<span style="color: red;">*
+						<td><input type="text" name="city" required /></td></td>
+			</tr>
+
+
+
+			<tr>
+				<td>Employee Dept:<span style="color: red;">*
+						<td><input type="text" name="dpt" required /></td></td>
+			</tr>
+			<tr>
+				<td>
+					<button type="submit" vaulue="submit">Submit</button> <input
+					type="reset">
+				</td>
+			</tr>
+	</table>
+	</form>
+	<div class="fixed-footer">
+		<div class="container">Copyright &copy; CapGeminiServlet @2018</div>
+	</div>
+</body>
+</html>
